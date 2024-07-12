@@ -14,6 +14,6 @@ func TestFeb2(t *testing.T){
   result := fib2(7, nil)
 
   if result != 13{
-    t.Error("Expected value 8 got", result)
+    t.Error("Expected value 13 got", result)
   }
 }
