@@ -9,3 +9,11 @@ func TestFeb1(t *testing.T){
     t.Error("Expected value 8 got", result)
   }
 }
+
+func TestFeb2(t *testing.T){
+  result := fib2(7, nil)
+
+  if result != 13{
+    t.Error("Expected value 8 got", result)
+  }
+}
