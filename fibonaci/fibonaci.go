@@ -20,3 +20,12 @@ func fib2(p int, seq []int) int{
 
   return seq[len(seq)-1]
 }
+
+func fib3(p int) int{
+  if p<2{
+    return p
+  }
+  a, b := fib3(p-1), fib3(p-2)
+
+  return a+b
+}
