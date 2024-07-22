@@ -1,31 +1,31 @@
 package main
 
-func fib1(p int) int{
+func fib1(p int) int {
   seq := []int {0,1}
   for len(seq) <= p {
-    seq = append(seq, seq[len(seq)-1] + seq[len(seq)-2])
+    seq = append(seq, seq[len(seq) - 1] + seq[len(seq) - 2])
   }
-  return seq[len(seq)-1]
+  return seq[len(seq) - 1]
 }
 
-func fib2(p int, seq []int) int{
+func fib2(p int, seq []int) int {
   if seq == nil{
-    seq = []int{0,1}
+    seq = []int{0, 1}
   }
 
-  if len(seq) <= p{
-    seq = append(seq, seq[len(seq)-1] + seq[len(seq)-2])
+  if len(seq) <= p {
+    seq = append(seq, seq[len(seq) - 1] + seq[len(seq) - 2])
     return fib2(p, seq)
   }
 
-  return seq[len(seq)-1]
+  return seq[len(seq) - 1]
 }
 
-func fib3(p int) int{
-  if p<2{
+func fib3(p int) int {
+  if p<2 {
     return p
   }
-  a, b := fib3(p-1), fib3(p-2)
+  a, b := fib3(p - 1), fib3(p - 2)
 
-  return a+b
+  return a + b
 }
